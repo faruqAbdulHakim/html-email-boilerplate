@@ -1,125 +1,143 @@
+<!--
+  How to use this boilerplate:
+  - Adjust html lang="en" attribute & body xml:lang="en" attribute
+  - Change the <title>
+  - Change the fonts import and font family (font-family: Arial, sans-serif; font-size: 16px;)
+  - Adjust the color-scheme
+  - Adjust the dark mode on the media query
+  - Adjust media query
+  - Change background color outer (#dde0e1, #4d4d4d)
+  - Change background color inner (#fafdfe, #2d2d2d)
+  - Change text color
+  - Adjust preheader / remove it
+  - Adjust inner box-shadow
+  - Add font-size inline
+-->
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no" />
-    <meta name="x-apple-disable-message-reformatting" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="supported-color-schemes" content="light dark" />
-    <title>HTML Email Template</title>
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+<html lang="en" dir="ltr" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>HTML Email Template</title>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style type="text/css">
+    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+
+    table { border-spacing: 0; border-collapse: collapse; }
+    td { padding: 0; }
+    h1, h2, h3, h4, h5, h6, p { font-weight: 400; line-height: 125%; margin: 0; }
+    img { border: 0; display: inline-block; }
+    a { text-decoration: none; color: #000; }
+
+    .ExternalClass { width: 100%; }
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+    u + .body .gmail-blend-screen { background: #000; mix-blend-mode: screen; }
+    u + .body .gmail-blend-difference { background: #000; mix-blend-mode: difference; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: inherit !important; }
+    span.Object { color: inherit !important; }
+    span.Object-hover { color: inherit !important; text-decoration:none !important;}
+    a[x-apple-data-detectors]{ color: inherit !important; text-decoration: inherit !important; }
+
+    /* Fix blue link with this class and add inline style to the text element */
+    .link { text-decoration: none; color: black !important}
+
+    /* Be aware of DARK MODE */
+    @media (prefers-color-scheme: dark) {
+      .body, .outer { background-color: #4d4d4d !important; color: #fff !important; }
+      .inner, .main { background-color: #2d2d2d !important; color: #fff !important; }
+      h1, h2, h3, h4, h5, h6, p { color: white !important; }
+      [data-ogsc] .body, [data-ogsc] .outer { background-color: #4d4d4d !important; color: #fff !important; }
+      [data-ogsc] .inner, [data-ogsc] .main { background-color: #2d2d2d !important; color: #fff !important; }
+      [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] h3, [data-ogsc] h4, [data-ogsc] h5, [data-ogsc] h6, [data-ogsc] p { color: white !important; }
+      .darkmode-transparent { background-color: transparent !important; }
+    }
+    @media screen and (max-width: 599.98px) {
+    }
+    @media screen and (max-width: 399.98px) {
+    }
+
+    /* Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+    /* FONT */
+    /* @font-face {
+      font-family: 'Aptos';
+      font-style: normal;
+      font-weight: normal;
+      font-display: swap;
+      src: url('./assets/Aptos-Display.woff2');
+    } */
+
+    /* Cursive doesn't work well, make sure to add sans-serif fallback */
+    /*-- font-family: 'Poppins', sans-serif; --*/
+    /*-- font-family: 'Dancing Script', cursive, sans-serif; --*/
+
+  </style>
+  <!--[if mso]>
     <style type="text/css">
-      :root { color-scheme: light dark; supported-color-schemes: light dark; }
-
-      table { border-spacing: 0; border-collapse: collapse; }
-      td { padding: 0; }
-      h1, h2, h3, h4, h5, h6, p { font-size: 16px; font-weight: 400; line-height: 20px; margin: 0; }
-      img { border: 0; display: block; }
-      a { text-decoration: none; color: #000; font-size: 16px; }
-
-      .ExternalClass { width: 100%; }
-      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
-      u + .body .gmail-blend-screen { background: #000; mix-blend-mode: screen; }
-      u + .body .gmail-blend-difference { background: #000; mix-blend-mode: difference; }
-      a[x-apple-data-detectors] { color: inherit !important; text-decoration: inherit !important; }
-      span.Object { color: inherit !important; }
-      span.Object-hover { color: inherit !important; text-decoration:none !important;}
-
-      /* Fix blue link with this class and add inline style to the text element */
-      .link { text-decoration: none; color: black !important}
-
-      /* Be aware of DARK MODE */
-      @media (prefers-color-scheme: dark) {
-        .body, .outer { background-color: #4d4d4d !important; color: #fff !important; }
-        .inner, .main { background-color: #2d2d2d !important; color: #fff !important; }
-        h1, h2, h3, h4, h5, h6, p { color: white !important; }
-        [data-ogsc] .body, [data-ogsc] .outer { background-color: #4d4d4d !important; color: #fff !important; }
-        [data-ogsc] .inner, [data-ogsc] .main { background-color: #2d2d2d !important; color: #fff !important; }
-        [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] h3, [data-ogsc] h4, [data-ogsc] h5, [data-ogsc] h6, [data-ogsc] p { color: white !important; }
-      }
-      @media screen and (max-width: 599.98px) {
-      }
-      @media screen and (max-width: 399.98px) {
-      }
-
-      /* Google Font */
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
-
-      /* Cursive doesn't work well, make sure to add sans-serif fallback */
-      /*-- font-family: 'Poppins', sans-serif; --*/
-      /*-- font-family: 'Dancing Script', cursive, sans-serif; --*/
-
+      body { background-color: #dde0e1 !important; }
+      body, table, td, h1, h2, h3, h4, h5, h6, p, a { font-family: 'Poppins', Arial, sans-serif !important; }
+      table { border-spacing: 0 !important; border-collapse: collapse !important; line-height: 100% !important; mso-line-height-rule: exactly !important; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; }
     </style>
-    <!--[if mso]>
-      <style type="text/css">
-        body { background-color: #dde0e1 !important; }
-        body, table, td, h1, h2, h3, h4, h5, h6, p, a { font-family: Arial, Helvetica, sans-serif !important; }
-        table { border-spacing: 0 !important; border-collapse: collapse !important; line-height: 100% !important; mso-line-height-rule: exactly !important; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; }
-      </style>
-    <![endif]-->
-    <!--[if mso]>
-      <noscript>
-        <xml>
-          <o:OfficeDocumentSettings>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-          </o:OfficeDocumentSettings>
-        </xml>
-      </noscript>
-    <![endif]-->
-  </head>
-  <body class="body" xml:lang="en" style="margin: 0; padding: 0; min-width: 100%; background-color: #dde0e1;">
+  <![endif]-->
+  <!--[if mso]>
+    <noscript>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    </noscript>
+  <![endif]-->
+</head>
 
-    <!-- Outer -->
-    <div class="outer" style="width: 100%; table-layout: fixed; background-color: #dde0e1; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 16px; margin: 40px auto;">
-      <!-- Inner -->
-      <div class="inner" style="max-width: 600px; background-color: #fafdfe; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 16px; box-shadow: 0 0 12px rgba(0,0,0,0.15); margin: 0 auto;">
+<body class="body" xml:lang="en" style="margin: 0; padding: 0; min-width: 100%; background-color: #dde0e1;">
 
-        <!-- Preheader -->
-        <div style="font-size: 0; color: #fafdfe; mso-line-height-rule: exactly; line-height: 0px; display: none; max-width: 0; max-height: 0; opacity: 0; overflow: hidden; mso-hide: all;">
-          This is our preheader text. &zwnj;&nbsp;&#847;
-        </div>
-        <!-- ~Preheader -->
+<!-- Preheader -->
+<div style="font-size: 0; color: #fafdfe; mso-line-height-rule: exactly; line-height: 0px; display: none; max-width: 0; max-height: 0; opacity: 0; overflow: hidden; mso-hide: all;">
+  This is our preheader text. &zwnj;&nbsp;&#847;
+</div>
+<!-- ~Preheader -->
 
-        <!-- Container -->
-        <!--[if mso]>
-          <table role="presentation" width="600" align="center" style="border-spacing: 0; border-collapse: collapse; color: #000;">
-          <tr>
-          <td style="padding: 0;">
-        <![endif]-->
-        <table role="presentation" align="center" class="main" style="border-spacing: 0; border-collapse: collapse; color: #000; font-family: Arial, Helvetica, sans-serif; font-size: 16px; background-color: #fafdfe; margin: 0 auto; padding: 0; width: 100%; max-width: 600px;">
-          <tr>
-            <td style="padding: 0;">
-              <table role="presentation" width="100%" style="border-spacing: 0;">
-                <tr>
-                  <td style="padding: 20px;">
-                    <h1>This is our content</h1>
-                    <p style="font-family: 'Poppins', Arial, sans-serif;">Poppins</p>
-                    <p style="font-family: 'Dancing Script', cursive, sans-serif;">Dancing Script</p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-        <!--[if mso]>
-          </td>
-          </tr>
-          </table>
-        <![endif]-->
-        <!-- ~Container -->
+<!-- Outer -->
+<div class="outer" style="width: 100%; table-layout: fixed; background-color: #dde0e1; color: #000; font-family: 'Poppins', Arial, sans-serif; font-size: 16px; margin: 40px auto;">
+<!-- Inner -->
+<div class="inner" style="max-width: 600px; background-color: #fafdfe; color: #000; font-family: 'Poppins', Arial, sans-serif; font-size: 16px; box-shadow: 0 0 12px rgba(0,0,0,0.15); margin: 0 auto;">
 
-      </div>
-      <!-- ~Inner -->
-    </div>
-    <!-- ~Outer -->
+  <!-- Container -->
+  <!--[if mso]>
+    <table role="presentation" width="600" align="center" style="border-spacing: 0; border-collapse: collapse; color: #000;">
+    <tr>
+    <td style="padding: 0;">
+  <![endif]-->
 
-  </body>
+  <table role="presentation" align="center" class="main" style="border-spacing: 0; border-collapse: collapse; color: #000; font-family: 'Poppins', Arial, sans-serif; font-size: 16px; background-color: #fafdfe; margin: 0 auto; padding: 0; width: 100%; max-width: 600px;">
+  
+  </table>
+
+  <!--[if mso]>
+    </td>
+    </tr>
+    </table>
+  <![endif]-->
+  <!-- ~Container -->
+
+</div>
+<!-- ~Inner -->
+</div>
+<!-- ~Outer -->
+
+</body>
 </html>
